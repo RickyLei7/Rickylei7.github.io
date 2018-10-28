@@ -283,7 +283,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/28/test/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/Tips/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ricky">
@@ -302,8 +302,8 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/10/28/test/" itemprop="url">
-                  test
+                <a class="post-title-link" href="/2018/09/07/Tips/" itemprop="url">
+                  Tips
                 </a>
               
             
@@ -329,9 +329,13 @@
                 
               
 
-              <time title="Created: 2018-10-28 10:48:10" itemprop="dateCreated datePublished" datetime="2018-10-28T10:48:10-06:00">2018-10-28</time>
+              <time title="Created: 2018-09-07 01:02:56 / Modified: 01:03:47" itemprop="dateCreated datePublished" datetime="2018-09-07T01:02:56-06:00">2018-09-07</time>
             
 
+            
+              
+
+              
             
           </span>
 
@@ -365,7 +369,24 @@
       
         
           
-            
+            <h1 id="CSS-Tips"><a href="#CSS-Tips" class="headerlink" title="CSS Tips"></a>CSS Tips</h1><h2 id="1-Left-and-Right-Layout"><a href="#1-Left-and-Right-Layout" class="headerlink" title="1.Left and Right Layout"></a>1.Left and Right Layout</h2><p>HTML:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;container clearfix&quot;&gt;</span><br><span class="line">      &lt;div class=&quot;left&quot;&gt;left&lt;/div&gt;</span><br><span class="line">      &lt;div class=&quot;right&quot;&gt;right&lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p>CSS:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">.clearfix::after&#123;</span><br><span class="line">    content: &apos;&apos;;</span><br><span class="line">    display: block;</span><br><span class="line">    clear: both;</span><br><span class="line">&#125;</span><br><span class="line">.left&#123;</span><br><span class="line">    width: 300px;</span><br><span class="line">    height: 100%;</span><br><span class="line">    background-color: red;</span><br><span class="line">    float: left;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.right&#123;</span><br><span class="line">    width: 700px;</span><br><span class="line">    height: 100px;</span><br><span class="line">    background-color: blue;</span><br><span class="line">    float: right;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="2-Three-columm-Layout"><a href="#2-Three-columm-Layout" class="headerlink" title="2 Three-columm Layout"></a>2 Three-columm Layout</h2><p>HTML:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;container clearfix&quot;&gt;</span><br><span class="line">       &lt;div class=&quot;left&quot;&gt;left&lt;/div&gt;</span><br><span class="line">       &lt;div class=&quot;mid&quot;&gt;mid&lt;/div&gt;</span><br><span class="line">       &lt;div class=&quot;right&quot;&gt;right&lt;/div&gt;</span><br><span class="line">   &lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p>CSS:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">.clearfix::after&#123;</span><br><span class="line">    content: &apos;&apos;;</span><br><span class="line">    display: block;</span><br><span class="line">    clear: both;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.left&#123;</span><br><span class="line">    width: 300px;</span><br><span class="line">    height: 100%;</span><br><span class="line">    background-color: red;</span><br><span class="line">    float: left;</span><br><span class="line">&#125;</span><br><span class="line">.mid&#123;</span><br><span class="line">    width: 400px;</span><br><span class="line">    float: left;</span><br><span class="line">    background-color: gray;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.right&#123;</span><br><span class="line">    width: 300px;</span><br><span class="line">    height: 100px;</span><br><span class="line">    background-color: blue;</span><br><span class="line">    float: right;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="3-Center-Horizontally"><a href="#3-Center-Horizontally" class="headerlink" title="3. Center Horizontally"></a>3. Center Horizontally</h2><p>margin-left: auto</p>
+<p>margin-right: auto  </p>
+<h2 id="4-Center-Vertically"><a href="#4-Center-Vertically" class="headerlink" title="4. Center Vertically"></a>4. Center Vertically</h2><p>Set the lineheight and height same will be center horizontally.</p>
+<p>and add text-align: center will be center vertically.</p>
+<h2 id="5-Other-Tips"><a href="#5-Other-Tips" class="headerlink" title="5. Other Tips"></a>5. Other Tips</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">display: inline-block;</span><br><span class="line">vertical-align: top;</span><br></pre></td></tr></table></figure>
+<p>These two always together.</p>
+<p>In the Inline element, the padding-left and padding-right work, but padding-top and padding-bottom doesn’t work.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">text-align:center</span><br></pre></td></tr></table></figure>
+<p>For center of inline element.</p>
+
           
         
       
@@ -418,7 +439,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/27/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/25/Some-HTML-tag-Note/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ricky">
@@ -437,8 +458,8 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/10/27/hello-world/" itemprop="url">
-                  Hello World
+                <a class="post-title-link" href="/2018/08/25/Some-HTML-tag-Note/" itemprop="url">
+                  Some HTML tag Note
                 </a>
               
             
@@ -464,9 +485,13 @@
                 
               
 
-              <time title="Created: 2018-10-27 15:22:12" itemprop="dateCreated datePublished" datetime="2018-10-27T15:22:12-06:00">2018-10-27</time>
+              <time title="Created: 2018-08-25 12:14:13 / Modified: 12:22:11" itemprop="dateCreated datePublished" datetime="2018-08-25T12:14:13-06:00">2018-08-25</time>
             
 
+            
+              
+
+              
             
           </span>
 
@@ -500,15 +525,630 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+            <h2 id="iframe"><a href="#iframe" class="headerlink" title="iframe"></a>iframe</h2><p>This tag is rarely use now, but we still can see it in some old project.  The <code>name</code> attribute must be with <code>a target</code>  tag. iframe has border by default, so usually <code>frameborder=0</code> can remove the border.</p>
+<h2 id="a"><a href="#a" class="headerlink" title="a"></a>a</h2><p><code>target=&quot;_blank&quot;</code>  Open the linked document in a new windows.</p>
+<p><code>target=_self</code> Open the link in the current windows.</p>
+<p><code>target=_parent</code> Open he link in the parent windows.</p>
+<p><code>targer=_top</code> Open the link in the top-most window.</p>
+<p><strong>href</strong> attribute </p>
+<p>ex: </p>
+<ol>
+<li><p><code>&lt;a href=&quot;google.com&quot;&gt;google&lt;/a&gt;</code>  The browser will think it is a file.  will open the <code>file:///C:/Users/Ricky/Documents/resume/google.com</code> in the browser.</p>
+</li>
+<li><p><code>&lt;a href=&quot;//google.com&quot;&gt;google&lt;/a&gt;</code> Open it by current protocol of browser.</p>
+</li>
+<li><code>&lt;a href=&quot;xxx.html&quot;&gt;xxx&lt;/a&gt;</code> go to the xxx.html</li>
+<li><code>&lt;a href=&quot;#yyyyyyyyyy&quot;&gt;yyyyyyyyyy&lt;/a&gt;</code> go to the target yyyyyyyy</li>
+<li><code>&lt;a href=&quot;?name=ricky&quot;&gt;ricky&lt;/a&gt;·</code>  The browser will add this query after the index.html, and sent a get request. <code>file:///C:/Users/Ricky/Documents/resume/index.html?name=ricky</code></li>
+<li><code>javascript:alert(1)</code>or<code>javascript:;</code> no action by click the a tag.</li>
+</ol>
+<h2 id="form"><a href="#form" class="headerlink" title="form"></a>form</h2><p>The <strong>form</strong> tag and <strong>a</strong> tag both are refresh to URL, the difference is a tag sent a <em>get</em> request, and the form tag sent a <em>post</em> request. Don’t forget add <code>method=&quot;post&quot;</code></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/18/HTTP-Introduction-and-Curl-Command/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ricky">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ricky's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/18/HTTP-Introduction-and-Curl-Command/" itemprop="url">
+                  HTTP Introduction and Curl Command
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-08-18 13:14:07" itemprop="dateCreated datePublished" datetime="2018-08-18T13:14:07-06:00">2018-08-18</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-08-20 00:38:55" itemprop="dateModified" datetime="2018-08-20T00:38:55-06:00">2018-08-20</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>The Hypertext Transfer Protocol (HTTP) is an application-level protocol for distributed, collaborative, hypermedia information system. HTTP is all Web Developer must have a strong understanding of this protocol.</p>
+<h1 id="HTTP-Requests"><a href="#HTTP-Requests" class="headerlink" title="HTTP Requests"></a>HTTP Requests</h1><p>An HTTP clients sends an HTTP request to a server. Including 4 part.</p>
+<ol>
+<li><p>verb path protocl and version<br> Ex:GET /HTTP 1.1<br> Verb：GET POST HEAD PUT DELETE TRACE OPTIONS.</p>
+</li>
+<li><p>Request Header<br> stander format<br> Key1: value1<br> Key2: value2<br> Key3: value3<br> The Request Header including the client infomation and Request content, the Content-Type define the format of fouth part.</p>
+</li>
+<li><p>Enter mark.<br> a blank line between the Request Header and Request Content. shows that the Request Header was finish, the following is Request Content.</p>
+</li>
+<li><p>Request Content<br> Request Content include the infomation which by client commited.</p>
+</li>
+</ol>
+<p><strong>Cheaking HTTP Request by Chrome devoloper tool.</strong><br>    Open the devoloper tool on the Chrome browser, selet Network, next tyep the address in the address box. <strong>Click the view source</strong> again! <strong>Click the view source</strong>.<br><img src="https://res.cloudinary.com/dzlsubvlr/image/upload/v1534746809/HTTP_Response.png" alt=""></p>
+<h1 id="HTTP-Response"><a href="#HTTP-Response" class="headerlink" title="HTTP Response"></a>HTTP Response</h1><p>After receiving and interpreting a request message, a server responds with an HTTP respons. Including 4 part.</p>
+<ol>
+<li>protocol/version status-code status<br> ex: HTTP/1.1 200 OK</li>
+</ol>
+<p>####status Code####<br>The Status-Code element is a 3-digit integer where first digit of the Status-Code defines the class of response and the last two digits do not have any categorization role. There are 5 values for the first digit:<br>    <strong>1xx</strong>: Informational<br>It means the request was received and the process is continuing.<br>    <strong>2xx</strong>: Success<br>It means the action was successfully received, understood, and accepted.<br>    <strong>3xx</strong>: Redirection<br>It means further action must be taken in order to complete the request.<br>    <strong>4xx</strong>: Client Error<br>It means the request contains incorrect syntax or cannot be fulfilled.<br>    <strong>5xx</strong>: Server Error<br>It means the server failed to fulfill an apparently valid request.</p>
+<ol start="2">
+<li><p>Response Header<br> Format:<br> Key1: value1<br> Key2: value2<br> Content-Type: <strong>text/html</strong>; charset=utf-8<br> text/html means the fourth part is HTML</p>
+</li>
+<li><p>Enter mark.<br> Similay with request. a blank line between the Response Header and Response Content.</p>
+</li>
+<li><p>Response Content<br> Shows that what content the browser needs to download.</p>
+</li>
+</ol>
+<p><strong>Cheaking HTTP Response by Chrome devoloper tool.</strong><br>Open the devoloper tool on the Chrome browser, selet Network, next tyep the address in the address box. <strong>Click the view source</strong> again! <strong>Click the view source</strong>.<br><img src="https://res.cloudinary.com/dzlsubvlr/image/upload/v1534746801/HTTP_Request.png" alt=""></p>
+<h2 id="curl-Command"><a href="#curl-Command" class="headerlink" title="curl Command"></a>curl Command</h2><p>curl is a tool to transfer data from or to a server, using one of the supported protocols (DICT, FILE, FTP, FTPS, GOPHER, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, POP3, POP3S, RTMP, RTSP, SCP, SFTP, SMB, SMBS, SMTP, SMTPS, TELNET and TFTP). The command is designed to work without user interaction.</p>
+<p>refer: <a href="https://curl.haxx.se/docs/manpage.html" target="_blank" rel="noopener">https://curl.haxx.se/docs/manpage.html</a></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/17/Introduce-3-Based-Git-Command/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ricky">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ricky's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/17/Introduce-3-Based-Git-Command/" itemprop="url">
+                  Introduce 3 Based Git Command
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-08-17 15:18:48 / Modified: 15:50:50" itemprop="dateCreated datePublished" datetime="2018-08-17T15:18:48-06:00">2018-08-17</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="1-git-init"><a href="#1-git-init" class="headerlink" title="1. git init"></a>1. git init</h1><p><img src="https://res.cloudinary.com/dzlsubvlr/image/upload/v1534541884/gitinit.png" alt=""><br>The <strong>git init</strong> command creates a new Git repository. it can be used to convert an existing, unversioned project to a Git repository or initialize a new, empty repository.</p>
+<h1 id="2-git-add"><a href="#2-git-add" class="headerlink" title="2. git add"></a>2. git add</h1><p><img src="https://res.cloudinary.com/dzlsubvlr/image/upload/v1534541884/gitAdd.png" alt=""><br>The <strong>git add</strong> command adds a change in the working directory to the staging aera. It will tells Git that you want to updates a file in the next commnit.<br>The <code>git add .</code> means stages new and modifiled, <strong>without deleted.</strong></p>
+<h1 id="3-git-commit-v"><a href="#3-git-commit-v" class="headerlink" title="3. git commit -v"></a>3. git commit -v</h1><p><img src="https://res.cloudinary.com/dzlsubvlr/image/upload/v1534541884/gitCommit.png" alt=""><br>The git commit command captures a snapshot of the project’s currently staged changes. Committed snapshots can be thought of as “safe” versions of a project—Git will never change them unless you explicitly ask it to. Prior to the execution of git commit, The git add command is used to promote or ‘stage’ changes to the project that will be stored in a commit. These two commands git commit and git add are two of the most frequently used.</p>
+<h3 id="v"><a href="#v" class="headerlink" title="-v"></a>-v</h3><h3 id="–verbose"><a href="#–verbose" class="headerlink" title="–verbose"></a>–verbose</h3><p>Show unified diff between the HEAD commit and what would be committed at the bottom of the commit message template to help the user describe the commit by reminding what changes the commit has.</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/17/explainshell-com-A-Good-Excellent-Tool-for-Learning-Bash-Command/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ricky">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ricky's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/17/explainshell-com-A-Good-Excellent-Tool-for-Learning-Bash-Command/" itemprop="url">
+                  explainshell.com -- A Good Excellent Tool for Learning Bash Command
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-08-17 14:49:02 / Modified: 15:03:07" itemprop="dateCreated datePublished" datetime="2018-08-17T14:49:02-06:00">2018-08-17</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>The (<a href="https://explainshell.com/" target="_blank" rel="noopener">https://explainshell.com/</a>) online tool websie is a good way for learning and explaining the Bash command. Simply type the command in the search bar then it will show you all the command option available and explaining.</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/17/Most-Frequently-Used-Command-in-Bash-File-System/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ricky">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ricky's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/17/Most-Frequently-Used-Command-in-Bash-File-System/" itemprop="url">
+                  Most Frequently Used Command in Bash File System
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-08-17 14:22:16 / Modified: 14:35:19" itemprop="dateCreated datePublished" datetime="2018-08-17T14:22:16-06:00">2018-08-17</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="1-ls"><a href="#1-ls" class="headerlink" title="1.ls"></a>1.ls</h1><p><strong>Lists</strong> the floder and file names in the current working directory.</p>
+<h1 id="2-cat"><a href="#2-cat" class="headerlink" title="2.cat"></a>2.cat</h1><p><strong>concatenate</strong> and <strong>print flies</strong> to stdout.</p>
+<h1 id="3-mv"><a href="#3-mv" class="headerlink" title="3.mv"></a>3.mv</h1><p><strong>Moves</strong> files and folders.</p>
+<h1 id="4-touch"><a href="#4-touch" class="headerlink" title="4.touch"></a>4.touch</h1><p><strong>Creat</strong> an empty file. And touches the file to update the access and or modification date of a file or directory without opening, saving or closing the file. </p>
 
           
         
@@ -590,7 +1230,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -598,6 +1238,39 @@
 
               
 
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-name">tags</span>
+                  
+                </div>
               
             </nav>
           
