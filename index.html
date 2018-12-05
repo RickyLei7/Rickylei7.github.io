@@ -283,6 +283,155 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/05/Automatic-Carousel-by-jQuery/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ricky">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ricky's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/05/Automatic-Carousel-by-jQuery/" itemprop="url">
+                  Untitled
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-12-05 12:55:01 / Modified: 12:56:10" itemprop="dateCreated datePublished" datetime="2018-12-05T12:55:01-07:00">2018-12-05</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <hr>
+<p>title: Automatic Carousel by jQuery<br>date: 2018-12-05 12:55:01<br>tags: carousel jQuery</p>
+<h1 id="Automatic-Carousel-by-jQuery"><a href="#Automatic-Carousel-by-jQuery" class="headerlink" title="Automatic Carousel by jQuery"></a>Automatic Carousel by jQuery</h1><p>Code: <a href="https://rickylei7.github.io/carousel/index.html" target="_blank" rel="noopener">My github</a></p>
+<p>Preview: <a href="https://rickylei7.github.io/carousel/index.html" target="_blank" rel="noopener">carousel</a></p>
+<h3 id="1-By-CSS3-jQuery"><a href="#1-By-CSS3-jQuery" class="headerlink" title="1.By CSS3 + jQuery"></a>1.By CSS3 + jQuery</h3><p>Idea：Add event to each button by jQuery, then change the position of picture.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">&lt;div class=&quot;window&quot;&gt;</span><br><span class="line">&lt;div class=&quot;images&quot; id=&quot;images&quot;&gt;</span><br><span class="line">&lt;img src=&quot;https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/13000444/Bernese-Mountain-Dog-MP.jpg&quot;</span><br><span class="line">width=300 alt=&quot;&quot;&gt;</span><br><span class="line">&lt;img src=&quot;https://dogstruggles.com/wp-content/uploads/2018/02/dogbed_burnese_mountain_dog_dogstruggles.jpg&quot;</span><br><span class="line">width=300 alt=&quot;&quot;&gt;</span><br><span class="line">&lt;img src=&quot;https://cdn.shopify.com/s/files/1/0601/4169/files/Happy_Bernese_Mountain_dog_mix_grande.jpg?v=1499108434&quot;</span><br><span class="line">width=300 alt=&quot;&quot;&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;div class=&quot;bnCtrl&quot;&gt;</span><br><span class="line">&lt;button id=&quot;p1&quot;&gt;No.1&lt;/button&gt;</span><br><span class="line">&lt;button id=&quot;p2&quot;&gt;No.2&lt;/button&gt;</span><br><span class="line">&lt;button id=&quot;p3&quot;&gt;No.3&lt;/button&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="2-By-jQuery"><a href="#2-By-jQuery" class="headerlink" title="2.By jQuery"></a>2.By jQuery</h2><p>html：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">&lt;div class=&quot;window&quot;&gt;</span><br><span class="line">&lt;div class=&quot;images&quot; id=&quot;images&quot;&gt;</span><br><span class="line">&lt;img src=&quot;https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/13000444/Bernese-Mountain-Dog-MP.jpg&quot;</span><br><span class="line">width=300 alt=&quot;&quot;&gt;</span><br><span class="line">&lt;img src=&quot;https://dogstruggles.com/wp-content/uploads/2018/02/dogbed_burnese_mountain_dog_dogstruggles.jpg&quot;</span><br><span class="line">width=300 alt=&quot;&quot;&gt;</span><br><span class="line">&lt;img src=&quot;https://cdn.shopify.com/s/files/1/0601/4169/files/Happy_Bernese_Mountain_dog_mix_grande.jpg?v=1499108434&quot;</span><br><span class="line">width=300 alt=&quot;&quot;&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;span id=&quot;buttons&quot;&gt;</span><br><span class="line">&lt;span&gt;No.1&lt;/span&gt;</span><br><span class="line">&lt;span&gt;No.2&lt;/span&gt;</span><br><span class="line">&lt;span&gt;No.3&lt;/span&gt;</span><br><span class="line">&lt;/span&gt;</span><br><span class="line"></span><br><span class="line">&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src=&quot;main.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+<p>JS:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">// catch all picture&apos;s button</span><br><span class="line">var allButtons = $(&apos;#buttons &gt; span&apos;)</span><br><span class="line"></span><br><span class="line">for(let i=0;i&lt;allButtons.length;i++)&#123;</span><br><span class="line">// trans all buttons to jQuery object</span><br><span class="line">$(allButtons[i]).on(&apos;click&apos;,function(x)&#123;</span><br><span class="line">//index() is jQeury method</span><br><span class="line">var index = $(x.currentTarget).index()</span><br><span class="line">// moving by index</span><br><span class="line">var p = index * -300</span><br><span class="line">$(&apos;#images&apos;).css(&#123;</span><br><span class="line">transform:&apos;translate(&apos;+p+&apos;px)&apos;</span><br><span class="line">&#125;)</span><br><span class="line">&#125;)</span><br><span class="line">&#125;</span><br><span class="line">// n and size is confirm which picture show by remainder</span><br><span class="line">var n = 0;</span><br><span class="line">var size = allButtons.length</span><br><span class="line">// eq() find the dom and change the dom to jQuery</span><br><span class="line">// trigger will trigger event &apos;click&apos;</span><br><span class="line">allButtons.eq(n%size).trigger(&apos;click&apos;)</span><br><span class="line">.addClass(&apos;red&apos;)</span><br><span class="line">.siblings(&apos;.red&apos;).removeClass(&apos;red&apos;)</span><br><span class="line"></span><br><span class="line">// set 1 second change pic by setInterval</span><br><span class="line">setInterval(()=&gt;&#123;</span><br><span class="line">n+=1</span><br><span class="line">allButtons.eq(n%size).trigger(&apos;click&apos;)</span><br><span class="line">.addClass(&apos;red&apos;)</span><br><span class="line">.siblings(&apos;.red&apos;).removeClass(&apos;red&apos;)</span><br><span class="line">&#125;,1000)</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/27/Implement-jQuery-API/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1651,152 +1800,13 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/17/Most-Frequently-Used-Command-in-Bash-File-System/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Ricky">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ricky's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/17/Most-Frequently-Used-Command-in-Bash-File-System/" itemprop="url">
-                  Most Frequently Used Command in Bash File System
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-08-17 14:22:16 / Modified: 14:35:19" itemprop="dateCreated datePublished" datetime="2018-08-17T14:22:16-06:00">2018-08-17</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="1-ls"><a href="#1-ls" class="headerlink" title="1.ls"></a>1.ls</h1><p><strong>Lists</strong> the floder and file names in the current working directory.</p>
-<h1 id="2-cat"><a href="#2-cat" class="headerlink" title="2.cat"></a>2.cat</h1><p><strong>concatenate</strong> and <strong>print flies</strong> to stdout.</p>
-<h1 id="3-mv"><a href="#3-mv" class="headerlink" title="3.mv"></a>3.mv</h1><p><strong>Moves</strong> files and folders.</p>
-<h1 id="4-touch"><a href="#4-touch" class="headerlink" title="4.touch"></a>4.touch</h1><p><strong>Creat</strong> an empty file. And touches the file to update the access and or modification date of a file or directory without opening, saving or closing the file. </p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+  </nav>
+
 
 
           </div>
@@ -1837,7 +1847,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
